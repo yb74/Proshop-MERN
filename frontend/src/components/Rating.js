@@ -64,7 +64,8 @@ Rating.defaultProps = {
 };
 
 Rating.propTypes = {
-    value: PropTypes.number.isRequired,
+    // value: PropTypes.number.isRequired,
+    value: PropTypes.number, // putting isRequired generate an error in the console (value of Rating undefined)
     text: PropTypes.string.isRequired,
     color: PropTypes.string
 }
