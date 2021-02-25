@@ -35,7 +35,7 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads'))); // make u
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '/frontend/build'))); // if we are in prod we set frontend/build to a static folder
-    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '/frontend', 'build', 'index.html'))); // any route that are not above (api route) will point to index.html in build folder located in the static folder
+    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))); // any route that are not above (api route) will point to index.html in build folder located in the static folder
 } else {
     app.get('/', (req, res) => {
         res.send("API is running...");
